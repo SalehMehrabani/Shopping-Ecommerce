@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function Header() {
   return (
-    <header className="w-full h-screen p-5">
+    <header className="w-full min-h-screen h-max md:h-screen p-5">
       <div
         className="p-10 shadow-lg h-full w-full flex flex-col justify-between "
         style={{
