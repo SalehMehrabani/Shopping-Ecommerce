@@ -16,7 +16,7 @@ function Navbar() {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.3 }}
+        transition={{ ease: "easeInOut", duration: 0.3, delay: 0.1 }}
         whileTap={{ scale: 0.9 }}
         whileHover={{ scale: 1.1 }}
         className="uppercase text-xl font-bold tracking-tighter text-stone-900 cursor-pointer"
