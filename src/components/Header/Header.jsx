@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="w-full min-h-screen h-max md:h-screen p-5">
       <div
-        className="p-10 shadow-lg h-full w-full flex flex-col justify-between gap-10"
+        className="p-10 shadow-lg h-full w-full flex flex-col justify-between gap-16"
         style={{
           backgroundImage: "url(images/Header.jpg)",
           backgroundSize: "cover",
