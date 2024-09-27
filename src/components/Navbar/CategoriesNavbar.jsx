@@ -18,7 +18,7 @@ function CategoriesNavbar() {
       <motion.ul
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ ease: "easeOut", duration: 0.3, delay: 0.1 }}
+        transition={{ ease: "easeOut", duration: 0.5, delay: 0.3 }}
         className="flex w-full items-center justify-between gap-5"
       >
         {categories.map((item, index) => (

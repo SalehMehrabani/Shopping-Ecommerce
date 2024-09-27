@@ -17,15 +17,16 @@ function Header() {
           <motion.h3
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeOut", transition: 0.3, delay: 0.1 }}
+            transition={{ ease: "easeOut", transition: 0.4, delay: 0.1 }}
             className="text-slate-50 uppercase text-4xl tracking-tight font-semibold"
           >
             Bring the look to the life with our fashion picks
           </motion.h3>
           <motion.button
+            whileTap={{ sclae: 0.9 }}
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeOut", transition: 0.3, delay: 0.3 }}
+            transition={{ ease: "easeOut", transition: 0.5, delay: 0.5 }}
             className="uppercase text-slate-50 text-xl tracking-tight underline underline-offset-4 decoration-1"
           >
             Shop Now

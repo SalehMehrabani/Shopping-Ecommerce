@@ -16,7 +16,7 @@ function Navbar() {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.3, delay: 0.1 }}
+        transition={{ ease: "easeInOut", duration: 0.4, delay: 0.1 }}
         whileTap={{ scale: 0.9 }}
         whileHover={{ scale: 1.1 }}
         className="uppercase text-xl font-bold tracking-tighter text-stone-900 cursor-pointer"
@@ -27,7 +27,7 @@ function Navbar() {
       <motion.ul
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.3, delay: 0.3 }}
+        transition={{ ease: "easeInOut", duration: 0.5, delay: 0.5 }}
         className=" hidden md:flex items-center justify-center gap-10"
       >
         <motion.li
@@ -59,7 +59,7 @@ function Navbar() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.3, delay: 0.6 }}
+        transition={{ ease: "easeInOut", duration: 0.5, delay: 0.8 }}
         className="flex items-center justify-center sm:gap-5 gap-3"
       >
         <motion.button whileTap={{ scale: 1.1 }} whileHover={{ scale: 0.9 }}>
