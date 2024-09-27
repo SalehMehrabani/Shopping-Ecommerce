@@ -17,7 +17,7 @@ function Header() {
           <motion.h3
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeOut", transition: 0.3 }}
+            transition={{ ease: "easeOut", transition: 0.3, delay: 0.1 }}
             className="text-slate-50 uppercase text-4xl tracking-tight font-semibold"
           >
             Bring the look to the life with our fashion picks
