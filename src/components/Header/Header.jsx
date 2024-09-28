@@ -1,12 +1,37 @@
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 function Header() {
+  const [backgroundImage, setBackgroundImage] = useState("");
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setBackgroundImage("url(images/Header.jpg)");
+          observer.disconnect(); // Stop observing after the image is loaded
+        }
+      },
+      { threshold: 0.1 } // Adjust threshold as needed
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect(); // Cleanup on component unmount
+    };
+  }, []);
+
   return (
-    <header className=" w-full  h-max md:h-screen p-5">
+    <header className="w-full h-max md:h-screen p-5">
       <div
+        ref={ref}
         className="p-10 shadow-lg h-full w-full flex flex-col justify-between gap-40 sm:gap-16"
         style={{
-          backgroundImage: "url(images/Header.jpg)",
+          backgroundImage: backgroundImage,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -17,16 +42,16 @@ function Header() {
           <motion.h3
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeOut", transition: 0.4, delay: 0.1 }}
+            transition={{ ease: "easeOut", duration: 0.4, delay: 0.1 }}
             className="text-slate-50 uppercase text-4xl tracking-tight font-semibold"
           >
-            Bring the look to the life with our fashion picks
+            Bring the look to life with our fashion picks
           </motion.h3>
           <motion.button
-            whileTap={{ sclae: 0.9 }}
+            whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeOut", transition: 0.5, delay: 0.5 }}
+            transition={{ ease: "easeOut", duration: 0.5, delay: 0.5 }}
             className="uppercase text-slate-50 text-xl tracking-tight underline underline-offset-4 decoration-1"
           >
             Shop Now
@@ -36,10 +61,10 @@ function Header() {
         <motion.p
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ ease: "easeOut", transition: 0.3, delay: 0.3 }}
+          transition={{ ease: "easeOut", duration: 0.3, delay: 0.3 }}
           className="w-full text-center text-6xl md:text-8xl uppercase text-slate-50 font-bold tracking-tight"
         >
-          unique fashion style
+          Unique fashion style
         </motion.p>
       </div>
     </header>
