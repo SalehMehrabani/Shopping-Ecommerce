@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Blurhash } from "react-blurhash";
 
 function ImageComponent({ src, alt, className, hash }) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -23,15 +22,10 @@ function ImageComponent({ src, alt, className, hash }) {
           style={{ objectFit: "cover" }}
         />
       ) : (
-        <Blurhash
-          hash={hash}
-          width="100%"
-          height="100%"
-          resolutionX={32}
-          resolutionY={32}
-          punch={1}
+        <div
           className={`w-full h-full ${className}`}
-        />
+          style={{ backgroundColor: "gray", opacity: 50 }}
+        ></div>
       )}
     </>
   );
