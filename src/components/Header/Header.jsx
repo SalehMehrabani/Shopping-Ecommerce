@@ -5,23 +5,21 @@ function Header() {
     <header className=" w-full  h-max md:h-screen p-5">
       <div
         className="relative p-10 shadow-lg h-full w-full flex flex-col justify-between gap-40 sm:gap-16"
-        style={{
-          backgroundImage: "url(images/Header.jpg)",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
+        style={
+          {
+            // backgroundImage: "url(images/Header.jpg)",
+            // backgroundSize: "cover",
+            // backgroundRepeat: "no-repeat",
+            // backgroundPosition: "center",
+          }
+        }
       >
-        {/* <img
-          src={"/images/Header.jpg"}
-          alt="Bring the look to the life with our fashion picks"
-          className="w-full h-full absolute top-0 left-0 -z-10"
-          style={{
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        /> */}
+        <img
+          src={"images/Header.jpg"}
+          className="absolute top-0 left-0 w-full h-full -z-10"
+          style={{ objectFit: "cover" }}
+          loading="lazy"
+        />
         {/* Top */}
         <div className="flex flex-col gap-5 w-full md:w-1/2 items-start">
           <motion.h3
