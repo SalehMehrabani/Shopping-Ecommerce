@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function ImageComponent({ src, alt, className, hash }) {
+function ImageComponent({ src, alt, className }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {

@@ -5,6 +5,7 @@ import CategoriesNavbar from "../components/Navbar/CategoriesNavbar";
 import Header from "../components/Header/Header";
 
 const Categories = lazy(() => import("../components/Categories/Categories"));
+const ProductList = lazy(() => import("../components/Products/ProductList"));
 
 function Home() {
   return (
@@ -19,6 +20,13 @@ function Home() {
         }
       >
         <Categories />
+      </Suspense>
+      <Suspense
+        fallback={
+          <div className="uppercase text-center text-xl">Loading...</div>
+        }
+      >
+        <ProductList />
       </Suspense>
     </div>
   );
