@@ -30,6 +30,7 @@ function ImageComponent({ src, alt, className, hash }) {
           resolutionX={32}
           resolutionY={32}
           punch={1}
+          className={`w-full h-full ${className}`}
         />
       )}
     </>
