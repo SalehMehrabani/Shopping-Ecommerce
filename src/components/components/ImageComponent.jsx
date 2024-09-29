@@ -22,6 +22,7 @@ function ImageComponent({ src, alt, className, hash }) {
             imageLoaded ? "opacity-1" : "opacity-0"
           } transition-opacity duration-300`}
           style={{ objectFit: "cover" }}
+          loading="lazy"
         />
       ) : (
         <div

@@ -13,7 +13,11 @@ function Home() {
       <CategoriesNavbar />
       <Header />
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div className="uppercase text-center text-xl">Loading...</div>
+        }
+      >
         <Categories />
       </Suspense>
     </div>

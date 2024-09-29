@@ -4,22 +4,11 @@ import ImageComponent from "../components/ImageComponent";
 function Header() {
   return (
     <header className=" w-full  h-max md:h-screen p-5">
-      <div
-        className="relative p-10 shadow-lg h-full w-full flex flex-col justify-between gap-40 sm:gap-16"
-        style={
-          {
-            // backgroundImage: "url(images/Header.jpg)",
-            // backgroundSize: "cover",
-            // backgroundRepeat: "no-repeat",
-            // backgroundPosition: "center",
-          }
-        }
-      >
+      <div className="relative p-10 shadow-lg h-full w-full flex flex-col justify-between gap-40 sm:gap-16">
         <ImageComponent
           src={"images/Header.jpg"}
           alt={"Bring the look to the life with our fashion picks"}
           className={"absolute top-0 left-0  -z-10"}
-          hash={"LROCP_^#~PM|-,ahNIWXxoayM~jZ"}
         />
         {/* Top */}
         <div className="flex flex-col gap-5 w-full md:w-1/2 items-start">
