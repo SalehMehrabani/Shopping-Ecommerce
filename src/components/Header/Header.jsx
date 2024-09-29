@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ImageComponent from "../components/ImageComponent";
 
 function Header() {
   return (
@@ -14,11 +15,11 @@ function Header() {
           }
         }
       >
-        <img
+        <ImageComponent
           src={"images/Header.jpg"}
-          className="absolute top-0 left-0 w-full h-full -z-10"
-          style={{ objectFit: "cover" }}
-          loading="lazy"
+          alt={"Bring the look to the life with our fashion picks"}
+          className={"absolute top-0 left-0  -z-10"}
+          hash={"LROCP_^#~PM|-,ahNIWXxoayM~jZ"}
         />
         {/* Top */}
         <div className="flex flex-col gap-5 w-full md:w-1/2 items-start">
