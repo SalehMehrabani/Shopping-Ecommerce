@@ -18,12 +18,16 @@ function ImageComponent({ src, alt, className, hash }) {
         <img
           src={src}
           alt={alt}
-          className={`w-full h-full ${className}`}
+          className={`w-full h-full ${className} ${
+            imageLoaded ? "opacity-1" : "opacity-0"
+          } transition-opacity duration-300`}
           style={{ objectFit: "cover" }}
         />
       ) : (
         <div
-          className={`w-full h-full ${className}`}
+          className={`w-full h-full ${className}${
+            !imageLoaded ? "opacity-1" : "opacity-0"
+          } transition-opacity duration-300`}
           style={{ backgroundColor: "gray", opacity: 50 }}
         ></div>
       )}
