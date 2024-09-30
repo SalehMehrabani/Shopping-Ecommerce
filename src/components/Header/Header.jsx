@@ -3,7 +3,7 @@ import ImageComponent from "../components/ImageComponent";
 
 function Header() {
   return (
-    <header className=" w-full  h-max md:h-screen p-5">
+    <header className=" w-full h-max md:h-screen p-5">
       <div className="relative p-10 shadow-lg h-full w-full flex flex-col justify-between gap-40 sm:gap-16">
         <ImageComponent
           src={"images/Header.jpg"}

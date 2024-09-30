@@ -7,6 +7,7 @@ import Header from "../components/Header/Header";
 const Categories = lazy(() => import("../components/Categories/Categories"));
 const ProductList = lazy(() => import("../components/Products/ProductList"));
 const Slogan = lazy(() => import("../components/Slogan/Slogan"));
+const About = lazy(() => import("../components/About/About"));
 
 function Home() {
   return (
@@ -37,6 +38,14 @@ function Home() {
         }
       >
         <Slogan />
+      </Suspense>
+      {/* About */}
+      <Suspense
+        fallback={
+          <div className="uppercase text-center text-xl">Loading...</div>
+        }
+      >
+        <About />
       </Suspense>
     </div>
   );
