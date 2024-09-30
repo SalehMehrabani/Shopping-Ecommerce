@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 
 const Categories = lazy(() => import("../components/Categories/Categories"));
 const ProductList = lazy(() => import("../components/Products/ProductList"));
+const Slogan = lazy(() => import("../components/Slogan/Slogan"));
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
       <Navbar />
       <CategoriesNavbar />
       <Header />
-
+      {/* Categories */}
       <Suspense
         fallback={
           <div className="uppercase text-center text-xl">Loading...</div>
@@ -21,12 +22,21 @@ function Home() {
       >
         <Categories />
       </Suspense>
+      {/* Products List */}
       <Suspense
         fallback={
           <div className="uppercase text-center text-xl">Loading...</div>
         }
       >
         <ProductList />
+      </Suspense>
+      {/* Slogan */}
+      <Suspense
+        fallback={
+          <div className="uppercase text-center text-xl">Loading...</div>
+        }
+      >
+        <Slogan />
       </Suspense>
     </div>
   );

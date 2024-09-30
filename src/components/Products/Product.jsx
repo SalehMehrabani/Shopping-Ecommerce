@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import ImageComponent from "../components/ImageComponent";
 function Product({ data }) {
   return (
