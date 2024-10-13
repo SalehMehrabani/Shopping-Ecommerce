@@ -26,7 +26,7 @@ function ImageComponent({ src, alt, className }) {
         />
       ) : (
         <div
-          className={`w-full h-full ${className}${
+          className={`w-full h-full -z-10 ${className}${
             !imageLoaded ? "opacity-1" : "opacity-0"
           } transition-opacity duration-300`}
           style={{ backgroundColor: "gray", opacity: 50 }}
